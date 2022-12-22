@@ -41,7 +41,7 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-        if(isaddcheese){
+        if(isaddcheese==false){
             this.price=this.price+ExtraCheesePrice;
             isaddcheese=true;
         }
@@ -50,7 +50,7 @@ public class Pizza {
 
     public void addExtraToppings() {
         // your code goes here
-        if(isaddtoppings) {
+        if(isaddtoppings==false) {
             this.price = this.price + ToppingsPrice;
             isaddtoppings=true;
         }
@@ -59,7 +59,7 @@ public class Pizza {
 
     public void addTakeaway(){
         // your code goes here
-        if(istakeway){
+        if(istakeway==false){
             this.price=this.price+PaperbagPrice;
             istakeway=true;
         }
@@ -69,14 +69,17 @@ public class Pizza {
     public String getBill(){
         // your code goes here
         if(isgetbill==false) {
-            if (isaddcheese)
+            if (isaddcheese==true){
                 this.bill = this.bill + "Extra Cheese Added: " + ExtraCheesePrice + "\n";
+            }
 
-            if (isaddtoppings)
+            if (isaddtoppings==true){
                 this.bill = this.bill + "Extra Toppings Added: " + ToppingsPrice + "\n";
-            if (istakeway)
+            }
+            if (istakeway==true){
                 this.bill = this.bill + "Paperbag Added: " + PaperbagPrice + "\n";
-            this.bill += "Total price: " +this.price+"\n";
+            }
+            this.bill += "Total price: " + this.price;
 
 
             isgetbill=true;
