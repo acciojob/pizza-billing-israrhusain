@@ -5,16 +5,16 @@ public class Pizza {
     private int price;
     private Boolean isVeg;
     private String bill;
+    
+    private int ExtraCheesePrice;
+    private int ToppingsPrice;
+    private int PaperbagPrice;  
+
     boolean isaddcheese;
 
     boolean isaddtoppings;
     boolean istakeway;
     boolean isgetbill;
-    private int ExtraCheesePrice;
-    private int ToppingsPrice;
-    private int PaperbagPrice;  
-
-
     public Pizza(Boolean isVeg){
         this.ExtraCheesePrice = 80;
         this.PaperbagPrice = 20;
@@ -79,7 +79,7 @@ public class Pizza {
             if (istakeway==true){
                 this.bill = this.bill + "Paperbag Added: " + PaperbagPrice + "\n";
             }
-            this.bill += "Total price: " + this.price;
+            this.bill += "Total price: " + this.price+"\n";
 
 
             isgetbill=true;
