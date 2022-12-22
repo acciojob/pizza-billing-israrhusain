@@ -10,9 +10,9 @@ public class Pizza {
     boolean isaddtoppings;
     boolean istakeway;
     boolean isgetbill;
-    int ExtraCheesePrice;
-    int ToppingsPrice;
-    int PaperbagPrice;
+    private int ExtraCheesePrice;
+    private int ToppingsPrice;
+    private int PaperbagPrice;  
 
 
     public Pizza(Boolean isVeg){
